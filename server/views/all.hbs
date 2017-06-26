@@ -1,0 +1,84 @@
+<!-- <nav class="navbar navbar-inverse">
+  ...
+</nav> -->
+<!-- <div class="container-fluid"> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row container-fluid">
+  <div id="openweathermap-widget-9"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'imperial',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+  <nav class="navbar navbar-default bg-info">
+  <div class="container-fluid">
+    <div id="easteregg" class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="ToDo" src="">
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputEmail3">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputPassword3">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+    </div>
+     <!-- <div class="checkbox">
+       <label>
+        <input type="checkbox"> Remember me
+      </label>
+    </div>  -->
+    <button type="submit" class="btn btn-default">Sign in</button>
+  </form>
+
+  <!-- <div class="jumbotron jumbo"> -->
+    <!-- <h1>To Do!</h1>
+    <p><a class="btn btn-primary btn-md" href="#" role="button">Learn more</a></p> -->
+
+
+
+
+  <!-- </div> -->
+
+
+
+
+
+
+
+
+
+  <div class="col-md-6"></div>
+<ul class="list-group list-group-item-active text-center">
+  {{#each todos}}
+    <a href="/todo/{{id}}" class="list-group-item">{{title}}</a>
+  {{/each}}
+</ul>
+
+<a type="button" class="btn btn-default btn-primary btn-md btn-block" href="/todo/new">
+  New Todo
+</a>
+
+
+<div class="panel panel-defaul"></div>
+
+  <div class="panel-footer">To Do</div>
+
+</div>
