@@ -17,6 +17,16 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/layouts', (req, res) => {
+  res.render('layouts');
+});
+
+
+router.get('/register', (req, res) => {
+  res.render('register');
+});
+
+
 router.get('/new', (req, res) => {
   res.render('new');
 });

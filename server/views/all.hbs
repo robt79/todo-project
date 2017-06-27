@@ -18,15 +18,28 @@
   <div id="openweathermap-widget-9"></div>
 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'imperial',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
 
-  <nav class="navbar navbar-default bg-info">
+<ul class="nav nav-pills">
+  <li role="presentation" class="active btn-primary"><a href="#">Home</a></li>
+  <li role="presentation"><a href="/todo/register">Register</a></li>
+</ul>
+
+
+
+<nav class="navbar navbar-default alert-info">
   <div class="container-fluid">
     <div id="easteregg" class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="ToDo" src="">
+        <!-- <img alt="ToDo" src=""> -->
+        <h4>ToDo</h4>
       </a>
     </div>
   </div>
 </nav>
+
+
+
+
+
 
 
 
@@ -45,7 +58,7 @@
         <input type="checkbox"> Remember me
       </label>
     </div>  -->
-    <button type="submit" class="btn btn-default">Sign in</button>
+    <button type="submit" class="btn btn-default btn-primary">Sign in</button>
   </form>
 
   <!-- <div class="jumbotron jumbo"> -->
@@ -68,17 +81,16 @@
   <div class="col-md-6"></div>
 <ul class="list-group list-group-item-active text-center">
   {{#each todos}}
-    <a href="/todo/{{id}}" class="list-group-item">{{title}}</a>
+    <a href="/todo/{{id}}" class="list-group-item alert alert-info list-group-item-info">{{title}}</a>
   {{/each}}
 </ul>
-
 <a type="button" class="btn btn-default btn-primary btn-md btn-block" href="/todo/new">
   New Todo
 </a>
 
 
-<div class="panel panel-defaul"></div>
+<div class="panel panel-default panel-primary"></div>
 
-  <div class="panel-footer">To Do</div>
+  <div class="panel-footer alert alert-info" role="alert">ToDo</div>
 
 </div>
