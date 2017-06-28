@@ -22,6 +22,13 @@ $(function() {
   // });
 
 
+  // document.getElementById('btn2').onclick = function() {
+  //   form.target = '_blank';
+  //   form.submit();
+  // }
+
+
+
 
 
 

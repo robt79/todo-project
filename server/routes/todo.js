@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-// const knex = require('../db/knex');
+const knex = require('../db/knex');
 const queries = require('../db/queries');
 const validTodo = require('../lib/validations').validTodo;
 const validId = require('../lib/validations').validId;
@@ -8,13 +8,21 @@ const setStatusRenderError = require('../lib/responseHelpers');
 // console.log("hello");
 
 router.get('/', (req, res) => {
-  queries
-    .getAll()
-    .then(todos => {
-      res.render('all', {
-        todos: todos
+  // if route has query string param user_id, fetch all todos for user_id with knex.
+  if (req.session.user_id) {
+    return knex('todo')
+      .where({
+        user_id: req.session.user_id
+      })
+      .then(todos => {
+        res.render('all', {
+          todos: todos
+        });
       });
-    });
+  } else {
+    res.render('all');
+  }
+
 });
 
 router.get('/layouts', (req, res) => {
@@ -22,9 +30,11 @@ router.get('/layouts', (req, res) => {
 });
 
 
-router.get('/register', (req, res) => {
-  res.render('register');
-});
+
+
+// router.get('/login', (req, res) => {
+//   res.render('login');
+// });
 
 
 router.get('/new', (req, res) => {
@@ -48,6 +58,7 @@ router.get('/:id/edit', (req, res) => {
 router.post('/', (req, res) => {
   validateTodoRenderError(req, res, (todo) => {
     todo.date = new Date();
+    todo.user_id = req.session.user_id;
     queries
       .create(todo)
       .then(ids => {

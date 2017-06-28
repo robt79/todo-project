@@ -3,6 +3,11 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+
+var session = require('express-session');
+
+var passport = require('passport');
+
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
@@ -15,6 +20,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
 
 const hbs = require('hbs');
 
@@ -32,6 +41,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cookieParser());
+app.use(session({
+  secret: 'victorias'
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
