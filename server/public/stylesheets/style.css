@@ -7,9 +7,20 @@ body {
   animation: BackgroundGradient 10s ease infinite;
 }
 
+.head {
+  float: right;
+}
+
+#easteregg {
+  border: none;
+  width: 70px;
+  height: 70px;
+  cursor: wait;
+}
+
 
 /*#text {
-            color: inherit;
+    color: inherit;
           }*/
 
 

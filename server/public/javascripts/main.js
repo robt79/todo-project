@@ -28,6 +28,17 @@ $(function() {
   // }
 
 
+  $(function() {
+    $('form[name="myform"]').submit(function(e) {
+      var username = $('form[name="myform"] input[name="username"]').val();
+      if (username == '') {
+        e.preventDefault();
+        $('#errors').text('*Please enter a username*');
+      }
+    });
+  });
+
+
 
 
 

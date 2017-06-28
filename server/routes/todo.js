@@ -31,6 +31,9 @@ router.get('/layouts', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('new');
 });
+router.get('/hidden', (req, res) => {
+  res.render('hidden');
+});
 
 router.get('/:id', (req, res) => {
   const id = req.params.id;
