@@ -8,7 +8,6 @@ const setStatusRenderError = require('../lib/responseHelpers');
 // console.log("hello");
 
 router.get('/', (req, res) => {
-  // if route has query string param user_id, fetch all todos for user_id with knex.
   if (req.session.user_id) {
     return knex('todo')
       .where({
@@ -28,14 +27,6 @@ router.get('/', (req, res) => {
 router.get('/layouts', (req, res) => {
   res.render('layouts');
 });
-
-
-
-
-// router.get('/login', (req, res) => {
-//   res.render('login');
-// });
-
 
 router.get('/new', (req, res) => {
   res.render('new');
