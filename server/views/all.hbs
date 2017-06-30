@@ -15,8 +15,26 @@
 
 
 <div class="row container-fluid">
-  <div id="openweathermap-widget-9"></div>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'imperial',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+  <!-- <div id="openweathermap-widget-9"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'imperial',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
+
+<div id="openweathermap-widget-9"></div>
+<script>
+window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+
+ window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'metric',containerid: 'openweathermap-widget-9',  });
+
+ (function() {
+   var script = document.createElement('script');
+   script.async = true;
+   script.src="https://jsonp.afeld.me/?url=https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+
+   var s = document.getElementsByTagName('script')[0];
+
+   s.parentNode.insertBefore(script, s);  })();
+
+</script>
+</div>
 
 <!-- <div id="openweathermap-widget-9"></div>
 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '2643743',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'metric',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
@@ -38,7 +56,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a type="button" id="logout"class="head btn btn-default navbar-btn btn-primary" href="/register/">Log Out</a>
-      <h4>ToDo</h4>
+      <h4 class="h4">ToDo</h4>
     </div>
   </div>
 </nav>
@@ -101,7 +119,7 @@
 </div>
 
   <div class="panel-footer alert alert-info" role="alert">
-    <h4>ToDo</h4>
+    <h4 class="bh4">ToDo</h4>
   </div>
 
 

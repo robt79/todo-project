@@ -18,9 +18,9 @@ body {
   cursor: wait;
 }
 
-#login {
+.h4 {
   position: inherit;
-  padding-right: 100px
+  padding-left: 12px;
 }
 
 
