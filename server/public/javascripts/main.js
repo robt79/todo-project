@@ -27,16 +27,25 @@ $(function() {
   //   form.submit();
   // }
 
-
-  $(function() {
-    $('form[name="myform"]').submit(function(e) {
-      var username = $('form[name="myform"] input[name="username"]').val();
-      if (username == '') {
-        e.preventDefault();
-        $('#errors').text('*Please enter a username*');
-      }
-    });
+  $("#register").click(function() {
+    alert("You are now registered!");
   });
+
+  $("#login").click(function() {
+    alert("Welcome back!");
+  });
+  $("#logout").click(function() {
+    alert("Have a great day!");
+  });
+
+  $("#create").click(function() {
+    alert("New to do created!");
+  });
+
+  $("#complete").click(function() {
+    alert("Keep it up!");
+  });
+
 
 
 

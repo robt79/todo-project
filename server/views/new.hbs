@@ -1,8 +1,8 @@
 
 <div class="container-fluid">
-  <nav class="navbar navbar-default ">
+  <nav class="navbar navbar-default alert-info ">
   <div class="container-fluid">
-    <div class="navbar-header alert-info">
+    <div class="navbar-header">
       <a class="navbar-brand" href="/todo/">
         <h4>ToDo</h4>
       </a>
@@ -13,7 +13,7 @@
 
 
 
-<form class="form" action="/todo" method="post">
+<form class="form" action="/todo/" method="post">
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" placeholder="Enter a todo" name="title">
@@ -24,7 +24,7 @@
     </textarea>
   </div>
   <div class="form-group">
-    <label for="priority">Priority</label>
+    <label for="priority">Importance</label>
     <select class="form-control" id="priority" name="priority">
       <option>1</option>
       <option>2</option>
@@ -33,9 +33,15 @@
       <option>5</option>
     </select>
   </div>
-  <button type="submit" class="btn btn-default btn-info">
+  <button type="submit" id="create" class="btn btn-default btn-primary">
     Create
   </button>
+
+  <!-- <a type="button" class="btn btn-default btn-primary" href="/todo/">Create</a> -->
+
+
+
+
 </form>
 
 </div>

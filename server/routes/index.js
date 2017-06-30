@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const bcrypt = require('bcrypt-as-promised');
-const knex = require('../db/knex')
+const knex = require('../db/knex');
 
 
 /* GET home page. */

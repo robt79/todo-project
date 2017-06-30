@@ -17,6 +17,15 @@
 <div class="row container-fluid">
   <div id="openweathermap-widget-9"></div>
 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '4671654',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'imperial',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+<!-- <div id="openweathermap-widget-9"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 9,cityid: '2643743',appid: 'ad27e14ddaf4d0232deb926dad49905a',units: 'metric',containerid: 'openweathermap-widget-9',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
+
+
+
+
+
+
 <!--
 <ul class="nav nav-pills">
   <li role="presentation" class="active btn-primary"><a href="#">Home</a></li>
@@ -28,8 +37,8 @@
 <nav class="navbar navbar-default alert-info">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a type="button" class=" head btn btn-default navbar-btn btn-primary" href="/register/">Log Out</a>
-        <h4>ToDo</h4>
+      <a type="button" id="logout"class="head btn btn-default navbar-btn btn-primary" href="/register/">Log Out</a>
+      <h4>ToDo</h4>
     </div>
   </div>
 </nav>
@@ -75,21 +84,27 @@
   <div class="col-md-6"></div>
 <ul class="list-group list-group-item-active text-center">
   {{#each todos}}
-    <a  href="/todo/{{id}}" class="list-group-item alert alert-info list-group-item-info">{{title}}</a>
+
+    <a href="/todo/{{id}}" class="list-group-item alert alert-info list-group-item-info">   {{title}}</a>
+
   {{/each}}
+  {{priority}}
+
 </ul>
 <a type="button" class="btn btn-default btn-primary btn-md btn-block" href="/todo/new">
   New Todo
 </a>
 
 
-<div class="panel panel-default panel-primary"></div>
+<div class="panel panel-default panel-primary">
+
+</div>
 
   <div class="panel-footer alert alert-info" role="alert">
     <h4>ToDo</h4>
   </div>
 
-</div>
+
 
 <!-- <div class="cursor">
     <button id="easteregg" class="N/A transparent" type="submit"

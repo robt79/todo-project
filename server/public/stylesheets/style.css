@@ -18,6 +18,11 @@ body {
   cursor: wait;
 }
 
+#login {
+  position: inherit;
+  padding-right: 100px
+}
+
 
 /*#text {
     color: inherit;
